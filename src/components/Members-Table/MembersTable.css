@@ -1,0 +1,9 @@
+.btn-update{
+    background-color: red;
+    border-radius: 10px;
+}
+
+.btn-delete{
+    background-color: green;
+    border-radius: 10px;
+}

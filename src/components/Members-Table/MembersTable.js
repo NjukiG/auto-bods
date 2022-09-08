@@ -1,6 +1,7 @@
 import React, { useEffect, useState }from "react";
 import { Table, Button } from 'semantic-ui-react'
 import axios from "axios";
+import "./MembersTable.css"
 
 
 export default function MembersTable(){
@@ -36,10 +37,10 @@ export default function MembersTable(){
         <Table.Cell>{data.email}</Table.Cell>
         <Table.Cell>{data.address}</Table.Cell>
         <Table.Cell>
-            <Button>UPDATE</Button>
+            <Button className="btn-update">UPDATE</Button>
         </Table.Cell>
         <Table.Cell>
-            <Button>DELETE</Button>
+            <Button className="btn-delete">DELETE</Button>
         </Table.Cell>
       </Table.Row>
             )
