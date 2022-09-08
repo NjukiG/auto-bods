@@ -8,9 +8,9 @@ export default function Header(){
             <div className="nav-items">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
-                <a href="/members">Add Member</a>
+                <a href="/members">Members</a>
                 <a href="/packages">Packages</a>
-                <a href="/add">Add Trainer</a>
+                <a href="/add">Trainers</a>
                 <a href="/contact">Contact</a>
             </div>
             <div className="nav-toggle">
