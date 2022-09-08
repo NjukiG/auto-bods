@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import "./Contact.css"
 
 export default function Contact(){
     return (
@@ -13,35 +14,21 @@ export default function Contact(){
                 <a href="//#">
                   <i class="fab fa-street"></i>
                 </a>
-                <p> Moringa street</p>
+                <p>Roysambu, Lumumba Drive</p>
               </div>
               <div class="information">
                 
-                <p>smart234Student@gmail.com</p>
+                <p>autobods_gym@gmail.com</p>
               </div>
               <div class="information">
               
-                <p>+254 798675289</p>
+                <p>+254 729694227</p>
               </div>
             </div>
             <div class="social-media">
               <p>Connect with us :
-                @Smart324student.com
+                autobods_gym.com
               </p>
-              <div class="social-icons">
-                <a href="/#">
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a href="/#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="/#">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="/#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
             </div>
           </div>
           </div>
