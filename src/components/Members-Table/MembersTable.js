@@ -21,6 +21,27 @@ export default function MembersTable(){
         localStorage.setItem("ID", id)
     }
 
+    const setData = (id, name, email, address) => {
+        localStorage.setItem("ID", id)
+        localStorage.setItem("name", name)
+        localStorage.setItem("email", email)
+        localStorage.setItem("address", address)
+    }
+
+    const getData = () => {
+        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/members")
+        .then((getData) => {
+            setApiData(getData.data)
+        })
+    }
+
+    const onDelete = (id) => {
+        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/members/${id}`)
+        .then(() => {
+            getData()
+        })
+    }
+
     return (
         <div>
             <Table singleLine>
@@ -49,7 +70,7 @@ export default function MembersTable(){
         </Table.Cell>
         <Table.Cell>
             <Link to = "/delete">
-            <Button className="btn-delete">DELETE</Button>
+            <Button className="btn-delete" onClick={() => onDelete(data.id)}>DELETE</Button>
             </Link>
         </Table.Cell>
       </Table.Row>
