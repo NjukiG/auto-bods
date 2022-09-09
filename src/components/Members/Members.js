@@ -24,7 +24,7 @@ export default function Members(){
     }
 
     return(
-        <div>
+        <div className={"form-display"}>
             <Form>
     <Form.Field>
       <label>Name</label>
@@ -44,7 +44,7 @@ export default function Members(){
       placeholder='Address'
       onChange={(e) => setAddress(e.target.value)} />
     </Form.Field>
-    <Button type='submit' onClick={sendDataToAPI}>Submit</Button>
+    <Button type='submit' onClick={sendDataToAPI} className={"submit"}>Submit</Button>
   </Form>
         </div>
     )
