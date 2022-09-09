@@ -16,11 +16,11 @@ export default function PackagesTable(){
     }, [])
 
     const setID = (id) => {
-        console.log(id)
+        // console.log(id)
         localStorage.setItem("ID", id)
     }
 
-    const setData = (id, name, email, address) => {
+    const setData = (id, name, description, amount) => {
         localStorage.setItem("ID", id)
         localStorage.setItem("name", name)
         localStorage.setItem("email", description)

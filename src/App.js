@@ -8,8 +8,8 @@ import Contact from './components/Contact/Contact';
 import MembersDetails from './components/MembersDetails/MembersDetails';
 import Update from './components/Update/Update';
 import Delete from './components/Delete/Delete';
-import PackagesDetails from './components/Packages/Package';
-import UpdatePackages from './components/Update/UpdatePackages';
+import PackagesDetails from './components/PackagesDetails/PackagesDetails';
+import UpdatePackages from './components/UpdatePackages/UpdatePackages';
 
 function App() {
   return (
