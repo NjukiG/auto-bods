@@ -2,6 +2,7 @@ import React, { useEffect, useState }from "react";
 import { Table, Button } from 'semantic-ui-react'
 import axios from "axios";
 import "./MembersTable.css"
+import { Link } from "react-router-dom"
 
 
 export default function MembersTable(){
@@ -13,7 +14,12 @@ export default function MembersTable(){
         .then((getData) => {
             setApiData(getData.data)
         })
-    })
+    }, [])
+
+    const setID = (id) => {
+        console.log(id)
+        localStorage.setItem("ID", id)
+    }
 
     return (
         <div>
@@ -37,10 +43,14 @@ export default function MembersTable(){
         <Table.Cell>{data.email}</Table.Cell>
         <Table.Cell>{data.address}</Table.Cell>
         <Table.Cell>
-            <Button className="btn-update">UPDATE</Button>
+            <Link to = "/update">
+            <Button className="btn-update" onClick={() => setID(data.id)}>UPDATE</Button>
+            </Link>
         </Table.Cell>
         <Table.Cell>
+            <Link to = "/delete">
             <Button className="btn-delete">DELETE</Button>
+            </Link>
         </Table.Cell>
       </Table.Row>
             )

@@ -6,6 +6,8 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import MembersDetails from './components/MembersDetails/MembersDetails';
+import Update from './components/Update/Update';
+import Delete from './components/Delete/Delete';
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
       <Header />  
 
       <Routes>
-      <Route path='/' element={<Home />}/>
+      <Route exact path='/' element={<Home />}/>
       <Route path='About' element={<About />}/>
       <Route path='Members' element={<MembersDetails />}/>
-      <Route path='Contact' element={<Contact />}/> 
+      <Route path='Contact' element={<Contact />}/>
+      <Route path='Update' element={<Update />}/>
+      <Route path='Delete' element={<Delete />}/>
       </Routes>   
       </BrowserRouter>
     </div>
