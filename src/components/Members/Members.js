@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Members.css"
 import { Button, Form } from 'semantic-ui-react'
 import axios from "axios";
-import { useHisory } from "rea"
+// import { useHistory } from "react-router-dom"
 
 export default function Members(){
-
+    // let history = useHistory()
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [address, setAddress] = useState("")
@@ -21,6 +21,9 @@ export default function Members(){
         name,
       email,
     address})
+    .then(() => {
+      // history.push("/MembersDetails")
+    })
     }
 
     return(

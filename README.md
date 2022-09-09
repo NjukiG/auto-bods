@@ -1,5 +1,22 @@
 # Getting Started with Create React App
 
+# Project Owner
+George Njuki
+
+# Project Name 
+AutoBods Gym Management System
+
+# Overview
+AutoBods gym Management System has been developed on React and Ruby. The main aim of the projects is to develop an app for my bootcamp prerequisites submission. In these modern days when people all over the world have become so much concerned about their health and diet, it is but obvious that they continually seek out for Gym center. AutoBods Management System is an easy way to use gym and health gym membership system. It can helps to keep records of members and their memberships, and give permit communication between members and their training regiments and their trainers as well.
+
+
+# Features:
+
+To be able to register each member of the gym
+Assign each member a training regimnt and a trainer.
+Track the package purchased by each member(membership package)
+Track the progress of the members and get their reviews on the regiment and their trainers.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
