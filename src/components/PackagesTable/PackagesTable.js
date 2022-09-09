@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Table, Button } from 'semantic-ui-react'
 import axios from "axios";
-import "./MembersTable.css"
 import { Link } from "react-router-dom"
 
 
-export default function MembersTable(){
+export default function PackagesTable(){
 
     const [apiData, setApiData] = useState([])
 
     useEffect(() => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/members")
+        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/packages")
         .then((getData) => {
             setApiData(getData.data)
         })
@@ -24,19 +23,19 @@ export default function MembersTable(){
     const setData = (id, name, email, address) => {
         localStorage.setItem("ID", id)
         localStorage.setItem("name", name)
-        localStorage.setItem("email", email)
-        localStorage.setItem("address", address)
+        localStorage.setItem("email", description)
+        localStorage.setItem("address", amount)
     }
 
     const getData = () => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/members")
+        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/packages")
         .then((getData) => {
             setApiData(getData.data)
         })
     }
 
     const onDelete = (id) => {
-        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/members/${id}`)
+        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/packages/${id}`)
         .then(() => {
             getData()
         })
@@ -44,12 +43,12 @@ export default function MembersTable(){
 
     return (
         <div>
-            <Table singleLine>
+               <Table singleLine>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Name</Table.HeaderCell>
-        <Table.HeaderCell>Email</Table.HeaderCell>
-        <Table.HeaderCell>Address</Table.HeaderCell>
+        <Table.HeaderCell>Description</Table.HeaderCell>
+        <Table.HeaderCell>Amount</Table.HeaderCell>
         <Table.HeaderCell>Update</Table.HeaderCell>
         <Table.HeaderCell>Delete</Table.HeaderCell>
       </Table.Row>
@@ -61,8 +60,8 @@ export default function MembersTable(){
                 <Table.Row>
         {/* <Table.Cell>{data.id}</Table.Cell> */}
         <Table.Cell>{data.name}</Table.Cell>
-        <Table.Cell>{data.email}</Table.Cell>
-        <Table.Cell>{data.address}</Table.Cell>
+        <Table.Cell>{data.description}</Table.Cell>
+        <Table.Cell>{data.amount}</Table.Cell>
         <Table.Cell>
             <Link to = "/update">
             <Button className="btn-update" onClick={() => setID(data.id)}>UPDATE</Button>
