@@ -10,6 +10,7 @@ import Update from './components/Update/Update';
 import Delete from './components/Delete/Delete';
 import PackagesDetails from './components/PackagesDetails/PackagesDetails';
 import UpdatePackages from './components/UpdatePackages/UpdatePackages';
+import TrainersDetails from "./components/TrainersDetails/TrainersDetails"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path='Update' element={<Update />}/>
       <Route path='UpdatePackages' element={<UpdatePackages />}/>
       <Route path='Delete' element={<Delete />}/>
+      <Route path='Trainers' element={<TrainersDetails />}/>
       </Routes>   
       </BrowserRouter>
     </div>

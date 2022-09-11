@@ -4,38 +4,38 @@ import axios from "axios";
 import { Link } from "react-router-dom"
 
 
-export default function PackagesTable(){
+export default function TrainersTable(){
 
     const [apiData, setApiData] = useState([])
 
     useEffect(() => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/packages")
+        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers")
         .then((getData) => {
             setApiData(getData.data)
         })
     }, [])
 
     const setID = (id) => {
-        // console.log(id)
+        console.log(id)
         localStorage.setItem("ID", id)
     }
 
-    const setData = (id, name, description, amount) => {
+    const setData = (id, name, email, gender) => {
         localStorage.setItem("ID", id)
         localStorage.setItem("name", name)
-        localStorage.setItem("email", description)
-        localStorage.setItem("address", amount)
+        localStorage.setItem("email", email)
+        localStorage.setItem("gender", gender)
     }
 
     const getData = () => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/packages")
+        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers")
         .then((getData) => {
             setApiData(getData.data)
         })
     }
 
     const onDelete = (id) => {
-        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/packages/${id}`)
+        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers/${id}`)
         .then(() => {
             getData()
         })
@@ -43,12 +43,12 @@ export default function PackagesTable(){
 
     return (
         <div>
-               <Table celled padded="very">
+            <Table celled>
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Name</Table.HeaderCell>
-        <Table.HeaderCell>Description</Table.HeaderCell>
-        <Table.HeaderCell>Amount</Table.HeaderCell>
+        <Table.HeaderCell>Email</Table.HeaderCell>
+        <Table.HeaderCell>Gender</Table.HeaderCell>
         <Table.HeaderCell>Update</Table.HeaderCell>
         <Table.HeaderCell>Delete</Table.HeaderCell>
       </Table.Row>
@@ -60,8 +60,8 @@ export default function PackagesTable(){
                 <Table.Row>
         {/* <Table.Cell>{data.id}</Table.Cell> */}
         <Table.Cell>{data.name}</Table.Cell>
-        <Table.Cell>{data.description}</Table.Cell>
-        <Table.Cell>{data.amount}</Table.Cell>
+        <Table.Cell>{data.email}</Table.Cell>
+        <Table.Cell>{data.gender}</Table.Cell>
         <Table.Cell>
             <Link to = "/update">
             <Button className="btn-update" onClick={() => setID(data.id)}>UPDATE</Button>
