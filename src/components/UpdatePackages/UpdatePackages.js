@@ -18,7 +18,7 @@ export default function UpdatePackages(){
 
 
     const sendDataToAPI = ()=> {
-      axios.put(`https://63199d6c6b4c78d91b3f3620.mockapi.io/packages/${ID}`, {
+      axios.put(`http://127.0.0.1:9292/packages/${ID}`, {
         name,
       description,
     amount})

@@ -16,7 +16,7 @@ export default function Members(){
 
 
     const sendDataToAPI = ()=> {
-      axios.post("http://127.0.0.1:9292//members", {
+      axios.post("http://127.0.0.1:9292/members", {
         name,
       email,
     address})

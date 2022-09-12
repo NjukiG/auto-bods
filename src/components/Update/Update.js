@@ -18,7 +18,7 @@ export default function Update(){
 
 
     const sendDataToAPI = ()=> {
-      axios.put(`https://63199d6c6b4c78d91b3f3620.mockapi.io/members/${ID}`, {
+      axios.put(`http://127.0.0.1:9292/members/${ID}`, {
         name,
       email,
     address})
