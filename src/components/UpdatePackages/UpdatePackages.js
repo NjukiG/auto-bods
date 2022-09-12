@@ -18,7 +18,7 @@ export default function UpdatePackages(){
 
 
     const sendDataToAPI = ()=> {
-      axios.put(`http://127.0.0.1:9292/packages/${ID}`, {
+      axios.put(`https://auto-bods-backend.herokuapp.com/packages/${ID}`, {
         name,
       description,
     amount})

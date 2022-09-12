@@ -16,7 +16,7 @@ export default function Package(){
 
 
   const sendDataToAPI = ()=> {
-    axios.post("http://127.0.0.1:9292/packages", {
+    axios.post("https://auto-bods-backend.herokuapp.com/packages", {
       name,
     description,
   amount})

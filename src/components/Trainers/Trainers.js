@@ -15,7 +15,7 @@ export default function Trainers(){
 
 
     const sendDataToAPI = ()=> {
-      axios.post("http://127.0.0.1:9292/trainers", {
+      axios.post("https://auto-bods-backend.herokuapp.com/trainers", {
         name,
       email,
     gender})

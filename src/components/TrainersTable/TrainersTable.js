@@ -9,7 +9,7 @@ export default function TrainersTable(){
     const [apiData, setApiData] = useState([])
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:9292/trainers")
+        axios.get("https://auto-bods-backend.herokuapp.com/trainers")
         .then((getData) => {
             setApiData(getData.data)
         })
@@ -28,14 +28,14 @@ export default function TrainersTable(){
     }
 
     const getData = () => {
-        axios.get("http://127.0.0.1:9292/trainers")
+        axios.get("https://auto-bods-backend.herokuapp.com/trainers")
         .then((getData) => {
             setApiData(getData.data)
         })
     }
 
     const onDelete = (id) => {
-        axios.delete(`http://127.0.0.1:9292/trainers/${id}`)
+        axios.delete(`https://auto-bods-backend.herokuapp.com/trainers/${id}`)
         .then(() => {
             getData()
         })

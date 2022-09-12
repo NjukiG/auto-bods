@@ -16,7 +16,7 @@ export default function Members(){
 
 
     const sendDataToAPI = ()=> {
-      axios.post("http://127.0.0.1:9292/members", {
+      axios.post("https://auto-bods-backend.herokuapp.com/members", {
         name,
       email,
     address})

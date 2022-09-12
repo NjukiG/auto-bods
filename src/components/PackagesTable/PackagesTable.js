@@ -9,7 +9,7 @@ export default function PackagesTable(){
     const [apiData, setApiData] = useState([])
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:9292/packages")
+        axios.get("https://auto-bods-backend.herokuapp.com/packages")
         .then((getData) => {
             setApiData(getData.data)
         })
@@ -28,14 +28,14 @@ export default function PackagesTable(){
     }
 
     const getData = () => {
-        axios.get("http://127.0.0.1:9292/packages")
+        axios.get("https://auto-bods-backend.herokuapp.com/packages")
         .then((getData) => {
             setApiData(getData.data)
         })
     }
 
     const onDelete = (id) => {
-        axios.delete(`http://127.0.0.1:9292/packages/${id}`)
+        axios.delete(`https://auto-bods-backend.herokuapp.com/packages/${id}`)
         .then(() => {
             getData()
         })

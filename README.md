@@ -17,9 +17,19 @@ Assign each member a training regimnt and a trainer.
 Track the package purchased by each member(membership package)
 Track the progress of the members and get their reviews on the regiment and their trainers.
 
-#Livelink
+# Livelink
 
 The live link to my project on Heroku is https://auto-bods.herokuapp.com/
+
+
+# Database link
+
+THe database is on Heroku at:
+For the members https://auto-bods-backend.herokuapp.com/members
+For the packages https://auto-bods-backend.herokuapp.com/packages
+For the trainers https://auto-bods-backend.herokuapp.com/trainers
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

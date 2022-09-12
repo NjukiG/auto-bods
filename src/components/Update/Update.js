@@ -18,7 +18,7 @@ export default function Update(){
 
 
     const sendDataToAPI = ()=> {
-      axios.put(`http://127.0.0.1:9292/members/${ID}`, {
+      axios.put(`https://auto-bods-backend.herokuapp.com/members/${ID}`, {
         name,
       email,
     address})
