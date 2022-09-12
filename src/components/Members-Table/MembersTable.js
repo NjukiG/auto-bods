@@ -9,7 +9,6 @@ export default function MembersTable(){
 
     const [apiData, setApiData] = useState([])
 
-    // https://63199d6c6b4c78d91b3f3620.mockapi.io/members
 
     useEffect(() => {
         axios.get("http://127.0.0.1:9292/members")
@@ -84,3 +83,9 @@ export default function MembersTable(){
         </div>
     )
 }
+
+
+
+
+
+    // https://63199d6c6b4c78d91b3f3620.mockapi.io/members
