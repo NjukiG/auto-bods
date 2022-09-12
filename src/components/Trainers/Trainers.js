@@ -15,7 +15,7 @@ export default function Trainers(){
 
 
     const sendDataToAPI = ()=> {
-      axios.post("https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers", {
+      axios.post("http://127.0.0.1:9292/trainers", {
         name,
       email,
     gender})

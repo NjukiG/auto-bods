@@ -16,7 +16,7 @@ export default function Package(){
 
 
   const sendDataToAPI = ()=> {
-    axios.post("https://63199d6c6b4c78d91b3f3620.mockapi.io/packages", {
+    axios.post("http://127.0.0.1:9292/packages", {
       name,
     description,
   amount})

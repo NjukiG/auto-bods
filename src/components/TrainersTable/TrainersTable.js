@@ -9,7 +9,7 @@ export default function TrainersTable(){
     const [apiData, setApiData] = useState([])
 
     useEffect(() => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers")
+        axios.get("http://127.0.0.1:9292/trainers")
         .then((getData) => {
             setApiData(getData.data)
         })
@@ -28,14 +28,14 @@ export default function TrainersTable(){
     }
 
     const getData = () => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers")
+        axios.get("http://127.0.0.1:9292/trainers")
         .then((getData) => {
             setApiData(getData.data)
         })
     }
 
     const onDelete = (id) => {
-        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/trainers/${id}`)
+        axios.delete(`http://127.0.0.1:9292/trainers/${id}`)
         .then(() => {
             getData()
         })

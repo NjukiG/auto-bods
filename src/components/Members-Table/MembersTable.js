@@ -9,8 +9,10 @@ export default function MembersTable(){
 
     const [apiData, setApiData] = useState([])
 
+    // https://63199d6c6b4c78d91b3f3620.mockapi.io/members
+
     useEffect(() => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/members")
+        axios.get("http://127.0.0.1:9292/members")
         .then((getData) => {
             setApiData(getData.data)
         })
@@ -29,14 +31,14 @@ export default function MembersTable(){
     }
 
     const getData = () => {
-        axios.get("https://63199d6c6b4c78d91b3f3620.mockapi.io/members")
+        axios.get("http://127.0.0.1:9292/members")
         .then((getData) => {
             setApiData(getData.data)
         })
     }
 
     const onDelete = (id) => {
-        axios.delete(`https://63199d6c6b4c78d91b3f3620.mockapi.io/members/${id}`)
+        axios.delete(`http://127.0.0.1:9292/members/${id}`)
         .then(() => {
             getData()
         })
