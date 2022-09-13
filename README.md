@@ -19,7 +19,7 @@ Track the progress of the members and get their reviews on the regiment and thei
 
 # Livelink
 
-The live link to my project on Heroku is https://auto-bods.herokuapp.com/
+The live link to my project on Netlify is https://magical-sunflower-960b1c.netlify.app/
 
 
 # Database link
