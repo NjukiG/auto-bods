@@ -20,14 +20,14 @@ function App() {
 
       <Routes>
       <Route exact path='/' element={<Home />}/>
-      <Route path='About' element={<About />}/>
-      <Route path='Members' element={<MembersDetails />}/>
-      <Route path='Contact' element={<Contact />}/>
-      <Route path='Packages' element={<PackagesDetails />}/>
-      <Route path='Update' element={<Update />}/>
-      <Route path='UpdatePackages' element={<UpdatePackages />}/>
-      <Route path='Delete' element={<Delete />}/>
-      <Route path='Trainers' element={<TrainersDetails />}/>
+      <Route path='/About' element={<About />}/>
+      <Route path='/Members' element={<MembersDetails />}/>
+      <Route path='/Contact' element={<Contact />}/>
+      <Route path='/Packages' element={<PackagesDetails />}/>
+      <Route path='/Update' element={<Update />}/>
+      <Route path='/UpdatePackages' element={<UpdatePackages />}/>
+      <Route path='/Delete' element={<Delete />}/>
+      <Route path='/Trainers' element={<TrainersDetails />}/>
       </Routes>   
       </BrowserRouter>
     </div>
