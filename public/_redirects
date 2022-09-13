@@ -1,0 +1,9 @@
+# Redirects from what the browser requests to what we serve
+/Home              /
+/About  /About
+/Members              /Members
+/Packages            /Packages
+/Trainers            /Trainers
+/Contact            /Contact
+
+
